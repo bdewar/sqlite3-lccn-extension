@@ -1,0 +1,2 @@
+gcc -shared -fPIC ../src/* /usr/local/libpcre/lib/libpcre.a -lsqlite3 -o sqlite3_lccn_ext.so
+
