@@ -1,2 +1,6 @@
+
+To build in the build directory, make sure libpcre and libsqlite3 are on your system and run this:
+(.so and .dll files are here but are .gitignored)
+
 gcc -shared -fPIC ../src/* /usr/local/libpcre/lib/libpcre.a -lsqlite3 -o sqlite3_lccn_ext.so
 
