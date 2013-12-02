@@ -1,6 +1,11 @@
 
-To build in the build directory, make sure libpcre and libsqlite3 are on your system and run this:
-(.so and .dll files are here but are .gitignored)
+First, make sure libpcre and libsqlite3 are on your system
+On Ubuntu:
+$>sudo apt-get install libsqlite3-dev libpcre3-dev
 
-gcc -shared -fPIC ../src/* /usr/local/libpcre/lib/libpcre.a -lsqlite3 -o sqlite3_lccn_ext.so
+Run this:
+gcc -shared -fPIC ../src/* -lpcre -lsqlite3 -o sqlite3_lccn_ext.so
+
+Then, load the .so file via SQLite3's load_extension mechanism.
+(You can do this via the SQLite3 C API or by using '.load' in the shell program)
 

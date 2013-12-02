@@ -40,7 +40,7 @@ int sqlite3_extension_init(
   char **pzErrMsg,
   const sqlite3_api_routines *pApi
 ){
-  char *e_msg;
+  const char *e_msg;
   int e_offset;
   //these global variables are required within callnumber.c
   re_is_cn = pcre_compile(P_IS_CN, 0, &e_msg, &e_offset, NULL);
