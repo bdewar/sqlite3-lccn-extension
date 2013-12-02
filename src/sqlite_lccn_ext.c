@@ -1,4 +1,3 @@
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -15,7 +14,7 @@ static void normalize_callnumber_sqlite(
   sqlite3_value** vals
 ){
   const char* val = sqlite3_value_text(vals[0]); // this is just a pointer, not allocated.  Does not need to be free()d.
-  char* cn_string = normalize_callnumber(val);     // this does need to be free()d.
+  char* cn_string = normalize_callnumber(val);   // this does need to be free()d.
 
   if (cn_string == NULL){
     sqlite3_result_null(ctx);
@@ -44,13 +43,12 @@ int sqlite3_extension_init(
   char *e_msg;
   int e_offset;
   //these global variables are required within callnumber.c
-	re_is_cn = pcre_compile(P_IS_CN, 0, &e_msg, &e_offset, NULL);
-	if (re_is_cn == NULL){
-		printf("Error compiling P_IS_CN at character: %d\n. Message: %s\n", e_offset, e_msg);
-		exit(1);
-	}
+  re_is_cn = pcre_compile(P_IS_CN, 0, &e_msg, &e_offset, NULL);
+  if (re_is_cn == NULL){
+    printf("Error compiling P_IS_CN at character: %d\n. Message: %s\n", e_offset, e_msg);
+    exit(1);
+  }
   pe_is_cn = pcre_study(re_is_cn, 0, &e_msg);
-
 
   SQLITE_EXTENSION_INIT2(pApi)
 

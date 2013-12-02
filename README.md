@@ -1,7 +1,7 @@
-sqlite3-lcsh-extension
+sqlite3-lccn-extension
 ======================
 
-Extends an SQLite3 database with SQL functions related to normalizing and sorting Library of Congress Shelving Numbers
+Extends an SQLite3 database with SQL functions related to normalizing and sorting Library of Congress Call Numbers.
 
 I had dredged this up from an old project and put it here in hopes of refreshing/refinining it a bit.
 

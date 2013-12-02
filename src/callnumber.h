@@ -2,14 +2,14 @@
 #define CALLNUMBER_H
 
 typedef struct callnumber_st{
-	char* original_string;
+  char* original_string;
   char* callnumber;
-	char* broad_subject;
-	char* subject_class;
-	char* date_cutter;
-	char* first_cutter;
-	char* second_cutter;
-	char* extraneous;
+  char* broad_subject;
+  char* subject_class;
+  char* date_cutter;
+  char* first_cutter;
+  char* second_cutter;
+  char* extraneous;
 }*callnumber;
 /*
 there's a whole lot of mallocing going on when we sort a database table

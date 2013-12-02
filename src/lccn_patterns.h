@@ -30,15 +30,15 @@ pcre_extra *pe_is_cn;
 
 //a regular expression that matches strings that ARE library of congress call numbers
 #define P_IS_CN   "^" P_BROAD_SUBJECT P_SUBJECT_CLASS \
-			      "(?:" P_DATE_CUTTER P_CUTTER "|" P_CUTTER "|" P_DATE_CUTTER ")" \
-				  "(?:" P_CUTTER ")?" \
-				  P_EXTRANEOUS "$"
+            "(?:" P_DATE_CUTTER P_CUTTER "|" P_CUTTER "|" P_DATE_CUTTER ")" \
+          "(?:" P_CUTTER ")?" \
+          P_EXTRANEOUS "$"
 
 //a regular expression that matches strings that CONTAIN library of congress call numbers
 #define P_HAS_CN  P_BROAD_SUBJECT P_SUBJECT_CLASS \
-			      "(?:" P_DATE_CUTTER P_CUTTER "|" P_CUTTER "|" P_DATE_CUTTER ")" \
-				  "(?:" P_CUTTER ")?" \
-				  P_EXTRANEOUS
+            "(?:" P_DATE_CUTTER P_CUTTER "|" P_CUTTER "|" P_DATE_CUTTER ")" \
+          "(?:" P_CUTTER ")?" \
+          P_EXTRANEOUS
 
 //a regular expression that matches the leading part of a library of congress call number (i.e. no Cutters)
 #define P_PART_CN "^" P_BROAD_SUBJECT "(?:" P_SUBJECT_CLASS ")?$"
