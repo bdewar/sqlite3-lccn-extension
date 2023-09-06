@@ -3,10 +3,6 @@ sqlite3-lccn-extension
 
 Extends an SQLite3 database with SQL functions related to normalizing and sorting Library of Congress Call Numbers.
 
-I had dredged this up from an old project and put it here in hopes of refreshing/refinining it a bit.
-
-It is in use at http://library.stfx.ca/circbycallno (Cirulation by Callnumber)  It seems to work well there (on real data and lots of it).
-
 
 Use
 ==============
@@ -41,7 +37,7 @@ The LCCN collating sequence can be added to a column as the default sort order, 
     title2 | BF2 A1
     title1 | bf 1 a1
     sqlite>
-    sqlite> -- terrible.  But now for the magic!
+    sqlite> -- terrible.
     sqlite>
     sqlite>.load /path/to/sqlite3-lccn-extension
     sqlite>
